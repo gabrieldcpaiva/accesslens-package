@@ -1,0 +1,112 @@
+{
+  "project": "AccessLens",
+  "demo_site": "Community Pantry",
+  "scope": {
+    "voices": ["keyboard", "screen-reader", "low-vision", "cognitive"],
+    "journeys": ["keyboard-navigation", "contact-form-completion", "semantic-controls"],
+    "boundary": "demo site only",
+    "mode": "read-only audit with optional sandbox repair"
+  },
+  "before_build": {
+    "confirmed_barriers": [
+      {
+        "id": "A-001",
+        "journey": "keyboard-navigation",
+        "barrier": "Dropdown navigation is hover-only without keyboard interaction",
+        "impact": "High",
+        "confidence": "Confirmed",
+        "evidence": ["before.html path", "reproduced in 3/3 runs"]
+      },
+      {
+        "id": "A-002",
+        "journey": "contact-form-completion",
+        "barrier": "Form inputs lack associated <label> elements",
+        "impact": "High",
+        "confidence": "Confirmed",
+        "evidence": ["before.html path", "DOM inspection"]
+      },
+      {
+        "id": "A-003",
+        "journey": "contact-form-completion",
+        "barrier": "Error summary does not receive focus after invalid submission",
+        "impact": "High",
+        "confidence": "Confirmed",
+        "evidence": ["before.html path", "keyboard replay"]
+      },
+      {
+        "id": "A-004",
+        "journey": "keyboard-navigation",
+        "barrier": "Focus indicator is visually weak and inconsistent",
+        "impact": "Medium",
+        "confidence": "Confirmed",
+        "evidence": ["before.html path", "visual inspection"]
+      },
+      {
+        "id": "A-005",
+        "journey": "semantic-controls",
+        "barrier": "Skip link is hidden without keyboard-revealed alternative",
+        "impact": "Medium",
+        "confidence": "Confirmed",
+        "evidence": ["before.html path"]
+      }
+    ]
+  },
+  "repair": {
+    "approved": ["A-001", "A-002", "A-003", "A-004", "A-005"],
+    "alternative_provided": false,
+    "sandbox_path": "demo/after.html",
+    "risk": "Low"
+  },
+  "verification": {
+    "method": "Independent keyboard and semantic replay against repaired build",
+    "passed": ["A-001", "A-002", "A-003", "A-004", "A-005"],
+    "failed": [],
+    "blocked": [],
+    "manual_review": ["screen-reader time-based verification remains optional"]
+  },
+  "human_authority_ledger": [
+    {
+      "id": "H-01",
+      "stage": "scope",
+      "decision": "Approved testing boundary for demo site",
+      "actor": "human"
+    },
+    {
+      "id": "H-02",
+      "stage": "triage",
+      "decision": "Prioritized form focus and keyboard dropdown over semantic polish",
+      "actor": "human"
+    },
+    {
+      "id": "H-03",
+      "stage": "repair",
+      "decision": "Selected minimal repair option over redesign",
+      "actor": "human"
+    },
+    {
+      "id": "H-04",
+      "stage": "release",
+      "decision": "Approved evidence export without production deployment",
+      "actor": "human"
+    }
+  ],
+  "evidence": {
+    "before_path": "demo/before.html",
+    "after_path": "demo/after.html",
+    "dashboard_summary": {
+      "journeys_tested": 3,
+      "confirmed_barriers": 5,
+      "approved_repairs": 5,
+      "independently_verified": 5,
+      "regressions": 0,
+      "manual_reviews_remaining": 1
+    }
+  },
+  "trust_signals": [
+    "No false certification claims",
+    "Viewable human decision ledger",
+    "Independent verifier isolation",
+    "Confidence labels for every finding",
+    "Partial verification state preserved"
+  ]
+}
