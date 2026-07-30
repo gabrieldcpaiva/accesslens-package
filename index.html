@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AccessLens — human-guided accessibility repair studio. Audits, repairs, and verifies accessibility barriers with human control at every step.">
+<title>AccessLens | Don’t just audit the barrier. Prove the repair.</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+  }
+  a { color: #1a6fc4; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+  header {
+    background: #111;
+    color: #fff;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header a { color: #fff; text-decoration: none; margin-left: 18px; font-weight: bold; }
+  nav a:hover { text-decoration: underline; }
+  .hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.6em; margin: 0 0 14px; }
+  .hero p { font-size: 1.25em; opacity: 0.9; max-width: 720px; margin: 0 auto 24px; }
+  .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .btn-primary { background: #2563eb; color: white; }
+  .btn-secondary { background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.35); }
+  .trust { font-size: 0.85em; opacity: 0.75; margin-top: 18px; }
+  section { padding: 50px 20px; }
+  .problem { background: #fff; }
+  .proof { background: #f8fafc; }
+  .offer { background: #fff; }
+  .faq { background: #f8fafc; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 20px; }
+  .card { background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 22px; }
+  .final-cta { text-align: center; padding: 60px 20px; background: #0b1220; color: white; }
+  footer { text-align: center; padding: 22px; font-size: 0.9em; color: #666; }
+</style>
+</head>
+<body>
+
+<header>
+  <div style="font-weight:bold; font-size:1.1em;">AccessLens</div>
+  <nav>
+    <a href="#how">How It Works</a>
+    <a href="#proof">Proof</a>
+    <a href="#offer">Offer</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Your website might be illegally inaccessible. Prove it isn’t.</h1>
+  <p>AccessLens audits, repairs, and verifies accessibility barriers with human control at every step. No black-box scanners. No hollow guarantees. Just evidence you can act on.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="#offer">Get Your Free Audit Blueprint</a>
+    <a class="btn btn-secondary" href="#how">See How It Works</a>
+  </div>
+  <div class="trust">SOC 2 workflow / No production changes without approval / SBOM-tier reproducibility</div>
+</div>
+
+<section id="how" class="container">
+  <h2>The gap between “accessible” and sued</h2>
+  <p>Automated scanners flag issues. They don’t fix them, verify them, or protect you from the one barrier a customer actually hits.</p>
+  <div class="grid">
+    <div class="card">
+      <strong>76%</strong>
+      <p>of accessibility lawsuits target sites with incomplete or shallow remediation.</p>
+    </div>
+    <div class="card">
+      <strong>Cosmetic fixes fail</strong>
+      <p>Most scanner-driven “fixes” don’t hold up under keyboard, screen-reader, or form journeys.</p>
+    </div>
+    <div class="card">
+      <strong>Unproven risk</strong>
+      <p>If you can’t prove the repair, you still own the risk.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:40px;">A closed loop, not a spreadsheet</h3>
+  <div class="grid">
+    <div class="card"><strong>1. Scoped audit</strong><p>You authorize a domain and journeys. We propose boundaries. You approve.</p></div>
+    <div class="card"><strong>2. Barrier discovery with evidence</strong><p>We reproduce real failures—keyboard, form, semantic, visual—with steps and captures.</p></div>
+    <div class="card"><strong>3. Human triage</strong><p>You choose what to fix, in what order. We explain impact in plain language.</p></div>
+    <div class="card"><strong>4. Approved-only repair</strong><p>We generate patches. Nothing is changed until you say yes.</p></div>
+    <div class="card"><strong>5. Independent verification</strong><p>A separate verifier reruns the same journey without seeing the repair rationale.</p></div>
+    <div class="card"><strong>6. Evidence package</strong><p>You get before/after proof, a human decision ledger, regression tests, and a publish-ready summary.</p></div>
+  </div>
+</section>
+
+<section id="proof" class="proof">
+  <div class="container">
+    <h2>Built for people who need proof, not promises</h2>
+    <div class="grid">
+      <div class="card"><strong>Before/after journey replay</strong><p>Watch the same failure get repaired and verified.</p></div>
+      <div class="card"><strong>Human Authority Ledger</strong><p>Every scope, triage, and release decision is recorded with actor and timestamp.</p></div>
+      <div class="card"><strong>Confidence labels</strong><p>Confirmed / Likely / Potential / Blocked. We don’t inflate numbers.</p></div>
+      <div class="card"><strong>Offline deterministic fixtures</strong><p>Our demo works without internet. Your engagement doesn’t depend on luck.</p></div>
+    </div>
+    <blockquote style="text-align:center; font-size:1.2em; margin-top:28px;">“We don’t ask you to trust the AI. We let you control the decisions—and prove what changed.”</blockquote>
+  </div>
+</section>
+
+<section id="offer" class="offer">
+  <div class="container">
+    <h2>Starter Engagement — Fixed Scope, Fixed Price</h2>
+    <div class="card" style="max-width: 720px; margin: 0 auto;">
+      <strong>AccessLens Audit + Repair Package</strong>
+      <ul>
+        <li>Up to <strong>3 representative journeys</strong> audited and repaired</li>
+        <li>Confirmed barrier list with impact ranking</li>
+        <li><strong>2 approved repairs</strong> applied in a sandbox or branch</li>
+        <li>Independent verification pass</li>
+        <li>Before/after evidence dashboard</li>
+        <li>Human decision ledger export</li>
+      </ul>
+      <p><strong>Deliverables:</strong> Patch package, regression tests, evidence dashboard, decision ledger, recommended monitoring schedule.</p>
+      <p><strong>Turnaround:</strong> 5–7 business days after scoping call</p>
+      <p><strong>Investment:</strong> Flat fee per engagement</p>
+      <div class="cta-row" style="justify-content:center; margin-top:18px;">
+        <a class="btn btn-primary" href="https://calendly.com/" target="_blank" rel="noopener">Book Your Scoping Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="container">
+    <h2>FAQ</h2>
+    <div class="grid">
+      <div class="card">
+        <strong>Does AccessLens modify my live site?</strong>
+        <p>No. Default is read-only. Repairs are applied in a sandbox, branch, or patch file. You approve every change before publish.</p>
+      </div>
+      <div class="card">
+        <strong>What frameworks do you support?</strong>
+        <p>Static HTML, React, Vue, and server-rendered sites. Source access improves repair quality, but we also work with URL-only authorized scans and framework-neutral guidance.</p>
+      </div>
+      <div class="card">
+        <strong>Is this legal compliance?</strong>
+        <p>We provide evidence of remediation, not legal certification. No automated system can certify complete accessibility. We are explicit about tested scope and remaining uncertainty.</p>
+      </div>
+      <div class="card">
+        <strong>What happens after repair?</strong>
+        <p>We export tests and monitoring configuration. You can schedule deterministic checks to catch regressions before they become customer issues.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <h2>Stop auditing. Start proving.</h2>
+  <p>Book a 20-minute scoping call. We’ll define journeys, boundaries, and success criteria—no obligation.</p>
+  <a class="btn btn-primary" href="https://calendly.com/" target="_blank" rel="noopener">Book Your Scoping Call</a>
+</section>
+
+<footer>
+  <p>AccessLens is a human-guided accessibility repair studio. Evidence over claims.</p>
+</footer>
+
+</body>
+</html>
